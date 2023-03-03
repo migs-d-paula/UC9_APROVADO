@@ -31,6 +31,7 @@ for (int linha = 0; linha < 5; linha++)
     {
         if (coluna == 0)
         {
+            Console.Clear();
             Console.WriteLine("Qual o nome do aluno " + linha + "?");
             matriz[linha, coluna] = double.Parse(Console.ReadLine());
         }
@@ -69,14 +70,22 @@ for (int linha = 0; linha < 5; linha++)
         prova1 = (matriz[linha, 3] * 30) / 100;
         prova2 = (matriz[linha, 4] * 25) / 100;
         prova3 = (matriz[linha, 5] * 35) / 100;
-        matriz[linha, 6] = prova1 + prova2 + prova3 + trabalhonota;
+        notatotal = prova1 + prova2 + prova3 + trabalhonota;
 
-        matriz[linha, 7] = (matriz[linha, 1] * 100) / aulas;
+        faltastotal = (matriz[linha, 1] * 100) / aulas;
 
         //DANDO A RESPOSTA SE O ALUNO FOI REPROVADO OU APROVADO
         if (faltastotal > 25 && notatotal > 6)
         {
-            
+            Console.WriteLine(matriz[linha, 0] + " foi APROVADO com: \n" + faltastotal + " de FALTAS, e " + notatotal + " de NOTA.");
+        }
+        if (faltastotal > 25 && notatotal > 6)
+        {
+            Console.WriteLine(matriz[linha, 0] + " foi APROVADO com: \n" + faltastotal + " de FALTAS, e " + notatotal + " de NOTA.");
+        }
+        if (faltastotal > 25 && notatotal > 6)
+        {
+            Console.WriteLine(matriz[linha, 0] + " foi APROVADO com: \n" + faltastotal + " de FALTAS, e " + notatotal + " de NOTA.");
         }
     }
 }
