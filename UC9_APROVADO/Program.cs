@@ -1,5 +1,5 @@
 ﻿//CRIANDO AS VARIÁVEIS
-double[,] matriz = new double[4, 7];
+double[,] matriz = new double[4, 9];
 string resposta, trabalho;
 int aulas, faltas, trabalhonota;
 double prova1, prova2, prova3, notatotal, faltastotal;
@@ -66,16 +66,21 @@ for (int linha = 0; linha < 5; linha++)
         prova2 = (matriz[linha, 4] * 25) / 100;
         prova3 = (matriz[linha, 5] * 35) / 100;
         matriz[linha, 6] = prova1 + prova2 + prova3 + trabalhonota;
+
+        faltastotal = (matriz[0, 1] * 100) / aulas;
+
+        //DANDO A RESPOSTA SE O ALUNO FOI REPROVADO OU APROVADO
+        if (faltastotal > 25 && notatotal > 6)
+        {
+
+        }
     }
 }
 
 Console.WriteLine("Quantas aulas foi dada no total?");
 aulas = int.Parse(Console.ReadLine());
 
-faltastotal = (faltas * 100) / aulas;
 
-//DANDO A RESPOSTA SE O ALUNO FOI REPROVADO OU APROVADO
-if (faltastotal > 25 && notatotal > 6)
-{
-    
-}
+
+
+
